@@ -8,11 +8,19 @@ public class CaesarCypher {
 		for (int i = 0; i < input.length; i++) {
 			char c = input[i];
 			
-			if(Character)
+			if(Character.isLetter(c)) {
+				char shifted = (char) ((c - 'a' + offset) % 26 + 'a');
+				result[i] = shifted;
+			
+			} else {
+				result[i] = c;
+			}
 		}
+		
+		return result;
 	}
 	
 	public char[] decode(char[] input, int offset) {
-		return null;
+		return encode(input, 26 - offset);
 	}
 }
