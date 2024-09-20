@@ -11,9 +11,12 @@ public class ArrayCount {
 			
 			// Check if the current string matches the target
 			if (array[i].equals(target)) {
+				
+				// Add one if there is a match
 				count++;
 			}
 		}
-		return 0;
+		
+		return count;
 	}
 }
