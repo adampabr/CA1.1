@@ -10,7 +10,23 @@ class ArrayCountTest {
 		ArrayCount ac = new ArrayCount();
 		String[] array = {"Brown", "Red", "Orange"};
 		int result = ac.count(array, "Blue");
-		assertEquals(0, result,  "The decoding method does not work as expected.")
+		assertEquals(0, result,  "The decoding method does not work as expected.");
+	}
+	
+	@Test
+	void testOneTarget() {
+		ArrayCount ac = new ArrayCount();
+		String[] array = {"Brown", "Red", "Orange"};
+		int result = ac.count(array, "Red");
+		assertEquals(1, result,  "The decoding method does not work as expected.");
+	}
+	
+	@Test
+	void testFourTargets() {
+		ArrayCount ac = new ArrayCount();
+		String[] array = {"Brown", "Red", "Orange", "Brown", "Red", "Orange", "Brown", "Red", "Orange", "Brown", "Red", "Orange"};
+		int result = ac.count(array, "Red");
+		assertEquals(4, result,  "The decoding method does not work as expected.");
 	}
 
 }
