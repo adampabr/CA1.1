@@ -1,4 +1,4 @@
-package ca1.task2;
+package ca1.task3;
 
 public class Loops {
 	public void printWords(int numberOfTimes) {
