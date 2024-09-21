@@ -20,7 +20,7 @@ public class Car {
 		if (this == o) return true;
 		if (getClass() != o.getClass()) return false;
 		Car car = (Car) o;
-		return Objects.equals(model, car.model) && Objects.equals(color, car.color)
+		return Objects.equals(model, car.model) && Objects.equals(color, car.color);
 	}
 	
 	@Override
